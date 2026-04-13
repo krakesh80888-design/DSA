@@ -1,18 +1,24 @@
-#include <stdio.h>
-int main() {
-int arr[5] = {10, 25, 30, 45, 50};
-int i, key, found = 0;
-printf("Enter element to search: ");
-scanf("%d", &key);
-for(i = 0; i < 5; i++) {
-if(arr[i] == key) {
-found = 1;
-break;
-}
-}
-if(found)
-printf("Element %d found at position %d\n", key, i+1);
-else
-printf("Element %d not found\n", key);
-return 0;
+#include<stdio.h>
+int main(){
+    int arr[100],n,i,key,found=0;
+    printf("Enter number of elements:");
+    scanf("%d",&n);
+    printf("Enter elements:\n");
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter element to search:");
+    scanf("%d",&key);
+    //Linear search
+    for(i=0;i<n;i++){
+        if(arr[i]==key){
+            printf("Element found at position %d\n",i+1);
+            found=1;
+            break;
+        }
+    }
+    if(!found==0){
+        printf("Element not found");
+        return 0;
+    }
 }
